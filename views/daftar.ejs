@@ -1,0 +1,26 @@
+<h1 class="display-4">Daftar Artikel</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% artikel.forEach(function(artikel){ %>
+            <tr>
+                <td><%= artikel.id %></td>
+                <td><%= artikel.title %></td>
+                <td>
+                    <form class="d-inline" action="/artikel/edit/<%= artikel.id %>" method="post">
+                        <input type="submit" value="edit" class="btn btn-primary">
+                    </form>
+                    <form class="d-inline" action="/artikel/hapus/<%= artikel.id %>" method="post">
+                    <input type="submit" value="hapus" class="btn btn-danger">
+                    </form>
+                </td>
+            </tr>
+        <%  }) %>
+    </tbody>
+</table>
