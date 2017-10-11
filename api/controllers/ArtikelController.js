@@ -6,9 +6,9 @@
  */
 
 module.exports = {
-	daftar: function(req, res){
+	daftar: function(req, res){ //kita membuat method daftar
         // res.view('daftar');
-        Artikel.find({}).exec(function(err, artikel){
+        Artikel.find({}).exec(function(err, artikel){ //pada model artikel, kita mencari
             if(err){
                 res.send(500, {error: 'Database anda mengalami error'});
             }

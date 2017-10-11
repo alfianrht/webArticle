@@ -1,5 +1,5 @@
 <h1 class="display-4">Daftar Artikel</h1>
-<table class="table table-striped">
+<table>
     <thead>
         <tr>
             <th>#</th>
@@ -13,12 +13,15 @@
                 <td><%= artikel.id %></td>
                 <td><%= artikel.title %></td>
                 <td>
-                    <form class="d-inline" action="/artikel/edit/<%= artikel.id %>" method="post">
-                        <input type="submit" value="edit" class="btn btn-primary">
-                    </form>
-                    <form class="d-inline" action="/artikel/hapus/<%= artikel.id %>" method="post">
-                    <input type="submit" value="hapus" class="btn btn-danger">
-                    </form>
+                    <!-- <form action="/artikel/edit/<%= artikel.id %>" method="post">
+                        <input class="waves-effect waves-light btn" type="submit" name="edit" value="Edit">                        
+                    </form> -->
+                    
+                    <a href="/artikel/edit/<%= artikel.id %>" class="waves-effect waves-light btn">EDIT</a>
+                    <a href="/artikel/hapus/<%= artikel.id %>" class="waves-effect waves-light btn">HAPUS</a>
+                    <!-- <form action="/artikel/hapus/<%= artikel.id %>" method="post">
+                        <input class="waves-effect waves-light btn" type="submit" name="hapus" value="hapus">  
+                    </form> -->
                 </td>
             </tr>
         <%  }) %>
