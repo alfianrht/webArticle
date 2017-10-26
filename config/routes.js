@@ -38,9 +38,7 @@ module.exports.routes = {
   'POST /artikel/edit/<%= artikel.id %>':{
     view: 'daftar'
   },
-  'POST /artikel/hapus/<%= artikel.id %>':{
-    view: 'hapus'
-  }
+
 
   /***************************************************************************
   *                                                                          *

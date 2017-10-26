@@ -18,6 +18,9 @@ module.exports = {
     tambah: function(req, res){
         res.view('tambah');
     },
+    artikelku: function(req, res){
+        res.view('');
+    },
     buat: function(req, res){
         var title = req.body.title;
         var body = req.body.body;
